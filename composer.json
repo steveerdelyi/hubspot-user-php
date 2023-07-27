@@ -3,7 +3,7 @@
     "description": "Access Hubspot user data from PHP and JS seamlessly",
     "type": "library",
     "license": "MIT",
-    "stability": "stable",
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "steveerdelyi",
