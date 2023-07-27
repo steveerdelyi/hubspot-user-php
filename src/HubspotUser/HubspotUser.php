@@ -1,4 +1,6 @@
 <?php
+    namespace HubspotUser;
+    
     use Curl\Curl;
 
     class HubspotUser {
