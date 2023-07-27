@@ -9,7 +9,7 @@
         private $user = null;
 
         function __construct($api_key, $utk_cookie = 'hubspotutk') {
-            $this->user = new stdClass();
+            $this->user = new \stdClass();
             $this->hubspot_api_key = $api_key;
             $this->utk_cookie = $utk_cookie;
 
@@ -43,7 +43,7 @@
                 $curl->get("https://api.hubapi.com/contacts/v1/contact/utk/$hubspot_utk/profile", ['property_mode' => 'value-only']);
 
                 if(!$curl->error && $curl->response->properties->hs_is_contact->value != 'false') {
-                    $this->user->name = new stdClass();
+                    $this->user->name = new \stdClass();
 
                     if(isset($curl->response->properties->firstname->value) && !empty($curl->response->properties->firstname->value)) {
                         $this->user->name->first = $curl->response->properties->firstname->value;
