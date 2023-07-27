@@ -1,5 +1,4 @@
 <?php
-    require get_template_directory() . '/vendor/autoload.php';
     use Curl\Curl;
 
     class HubspotUser {
