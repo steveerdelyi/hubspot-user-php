@@ -1,0 +1,20 @@
+{
+    "name": "steve-erdelyi/hubspot-user-php",
+    "description": "Access Hubspot user data from PHP and JS seamlessly",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "steveerdelyi",
+            "email": "steve.erdelyi@noblestudios.com"
+        }
+    ],
+    "require": {
+        "php-curl-class/php-curl-class": "^9.17"
+    },
+    "autoload": {
+        "psr-4": {
+          "HubspotUser\\": "src/HubspotUser/"
+        }
+    }
+}
