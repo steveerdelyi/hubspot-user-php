@@ -18,7 +18,7 @@
             }
         }
 
-        function getUtk() {
+        private function getUtk() {
             if($this->hasUtk()) {
                 return $_COOKIE[$this->utk_cookie];
             }
@@ -26,7 +26,7 @@
             return null;
         }
 
-        function hasUtk() {
+        private function hasUtk() {
             if(isset($_COOKIE[$this->utk_cookie]) && !empty($_COOKIE[$this->utk_cookie])) {
                 return true;
             }
@@ -34,7 +34,7 @@
             return false;
         }
 
-        function sync() {
+        private function sync() {
             if($this->hasUtk()) {
                 $hubspot_utk = $this->getUtk();
 
@@ -62,7 +62,7 @@
             return false;
         }
 
-        function get($value) {
+        public function get($value) {
             if(isset($this->user->$value)) {
                 return $this->user->$value;
             }
@@ -70,7 +70,7 @@
             return null;
         }
 
-        function output() {
+        public function output() {
             ob_start();
             ?>
             <script>
